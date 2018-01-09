@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <title>Västergatan Sexton - Din frisör i Malmö</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/site.css" />
+
+    <script type="text/javascript">
+        $(function () {
+            //$('#barbershopContent a').lightBox();
+
+            switch (location.hash) {
+                case "#nyheter":
+                    toggleContent('#newsContent', $("#newsMenuItem"));
+                    break;
+                case "#salongen":
+                    toggleContent('#barbershopContent', $("#barbershopMenuItem"));
+                    break;
+                case "#omoss":
+                    toggleContent('#aboutContent', $("#aboutMenuItem"));
+                    break;
+                default:
+                    toggleContent('#startContent', $("#startMenuItem"));
+                    break;
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default navbar-vg16">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a id="startMenuItem" class="navbar-brand" href="#" onclick="toggleContent('#startContent', this);">
+                        <img width="270" alt="Västergatan Sexton logo" src="img/logo_vg16_white.gif" />
+                        <h1 class="sr-only">Västergatan Sexton - Din frisör i Malmö</h1>
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a id="newsMenuItem" href="#nyheter" onclick="toggleContent('#newsContent', this);">Senaste</a></li>
+                        <li><a id="barbershopMenuItem" href="#salongen" onclick="toggleContent('#barbershopContent', this);">Salongen</a></li>
+                        <li><a id="aboutMenuItem" href="#omoss" onclick="toggleContent('#aboutContent', this);">Om oss</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="content row">
+            <div class="content-left col-sm-8">
+
+                <div id="startContent" class="pageContent" style="display: none;">
+                    <h3 class="sr-only">Interiör</h3>
+                    <img alt="Interiör" class="img-responsive" src="img/interior.jpg" />
+                </div>
+
+                <div id="newsContent" class="pageContent" style="display: none;">
+                    <h2>Facebook</h2>
+                    <p>
+                        Vi har valt att använda oss av <a href="https://www.facebook.com/vastergatan.sexton" target="_blank">Facebook</a> för att hålla våra kunder uppdaterade med allt vi gör. Välkommen att kommentera/följa/like'a!
+                    </p>
+                    <p>Allie & Lisa</p>
+                </div>
+
+                <div id="barbershopContent" class="pageContent" style="display: none;">
+                    <p>Till oss kommer man för att få en upplevelse i en mysig miljö, och för att få slappna av samtidigt som man blir snygg i håret. Vi kan erbjuda flera olika behandlingar inom hårvård för både män och kvinnor. Hjärtligt välkommen till oss på västergatan sexton.</p><br />
+                    <img class="img-responsive" alt="" src="img/salongen_1.jpg" /><br/>
+                    <img class="img-responsive" alt="" src="img/salongen_2.jpg" /><br />
+                    <img class="img-responsive" alt="" src="img/salongen_3.jpg" />
+                </div>
+
+                <div id="aboutContent" class="pageContent" style="display: none;">
+                    <p>Det är vi som är västergatan sexton. Vårt mål är att aldrig stanna upp som frisörer. Vi går regelbundet på visningar och kurser för att kunna erbjuda våra kunder det senaste modet inom hår. För oss är det viktigaste att plocka fram det finaste hos varje kund.<br />Hoppas vi ses!</p><br />
+
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <img alt="Lisa" src="img/lisa_1.jpg" class="img-responsive" title="Lisa" />
+                            <div class="image-text">Lisa</div>
+                        </div>
+                        <div class="col-xs-6">
+                            <img alt="Allie" src="img/allie_1.jpg" class="img-responsive" title="Allie" />
+                            <div class="image-text">Allie</div>
+                        </div>
+                    </div>
+					<div class="row">
+                        <div class="col-xs-6 col-xs-push-3" style="margin-top: 20px;">
+                            <img alt="Allie" src="img/allie_1.jpg" class="img-responsive" title="Allie" />
+                            <div class="image-text">Martina</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="content-right col-sm-4">
+                <h2>Öppettider</h2>
+                <p style="width: 49%; float: left;">
+                    Måndag<br />
+                    Tisdag<br />
+                    Onsdag<br />
+                    Torsdag<br />
+                    Fredag<br />
+                    Lördag<br />
+                    Söndag
+                </p>
+                <div style="width: 48%; float: right;">
+                    9 - 15<br />
+                    9 - 20<br />
+                    8 - 16<br />
+                    9 - 20<br />
+                    9 - 18<br />
+                    10 - 14<br />
+                    Stängt.
+                </div>
+                <div style="clear: both;"></div>
+
+                <h2>TELEFON</h2>
+                <p>040 - 23 91 91</p>
+
+                <h2>ADRESS</h2>
+                <p>
+                    Västergatan 16<br />
+                    211 21 MALMÖ
+                </p>
+                <p style="margin-top: 26px;">
+                    Besök oss på Facebook eller Google:<br />
+                    <a href="https://www.facebook.com/vastergatan.sexton"><img alt="Facebook" src="img/fb_icon_32x32.png" /></a>
+                    <a href="https://plus.google.com/112353261986393687212"><img alt="Google" src="img/google_plus_logo.png" /></a>
+                </p>
+
+                <!-- <div> -->
+                    <!-- <img alt="Söker frisör" class="img-responsive" src="img/coworker.jpg" /> -->
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
